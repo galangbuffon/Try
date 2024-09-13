@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPK Gyokai Indonesia Kompeten</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="warna.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="Bekerja_Sama.css">
+    <link rel="stylesheet" href="desain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('Foto/Foto Gedung.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Tambahkan overlay untuk meningkatkan keterbacaan konten */
+        body::before {
+            content: '';
+            position: fixed;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            inline-size: 100%;
+            block-size: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Sesuaikan opacity sesuai kebutuhan */
+            z-index: -1;
+        }
+
+        /* Pastikan konten tetap terbaca */
+        main {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="profile-photo">
+                <img src="Foto/Logo.png" alt="Foto Profil" style="inline-size: 69px;">
+            </div>
+            <div class="logo"><small>LPK Gyokai Indonesia Kompeten</small></div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="Program_Unggulan1.html"><small>PT.polikemas San Putra</small></a></li>
+                <li><a href="Program_Unggulan3.html"><small>PT.Vivo Mobile Indonesia</small></a></li>
+                <li><a href="Program_Unggulan4.html"><small>PT.Tirta Intimizu Nusantara</small></a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="Koza/Dasar.png" alt="Slide 1">
+                    <div class="slide-content">
+                        <h1>PT.Koza Presisi Indonesia</h1>
+                        <p>Pelatihan berkualitas untuk masa depan yang cerah</p>
+                    </div>
+                </div>
+            </div>
+            <button class="slide-btn prev">&#10094;</button>
+            <button class="slide-btn next">&#10095;</button>
+            <div class="slide-indicators">
+            </div>
+        </section>
+        <section id="tentang-kami" class="about-section">
+            <div class="container">
+                <h2 style="color: white;">PT.Koza Presisi Indonesia</h2>
+                    <div class="about-content">
+                    <div class="about-text">
+                        <p>LPK Maju Bersama adalah lembaga pelatihan terkemuka yang berdedikasi untuk mengembangkan keterampilan dan potensi peserta didik. Dengan pengalaman lebih dari 10 tahun, kami telah membantu ribuan peserta meraih karir impian mereka.</p>
+                        <a id="learn-more-btn"></a>
+                    </div>
+                    <div class="about-image-container">
+                        <div class="main-image">
+                            <img id="mainImage" src="Koza/Koza.jpg" alt="Tim LPK Maju Bersama" onclick="openModal(this.src)">
+                        </div>
+                        <div class="thumbnail-carousel">
+                            <button class="carousel-button prev" onclick="moveCarousel(-1)">&lt;</button>
+                            <div class="thumbnail-container">
+                                <div class="thumbnail">
+                                    <img src="Koza/Koza1.jpg" alt="Gambar 1">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="Koza/Koza2.jpg" alt="Gambar 2">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="Koza/Koza3.jpg" alt="Gambar 3">
+                                </div>
+                                <div class="thumbnail">
+                                    <img src="Koza/Koza.jpg" alt="Gambar 3">
+                                </div>
+                            </div>
+                            <button class="carousel-button next" onclick="moveCarousel(1)">&gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fasilitas" class="facilities-section">
+            <div class="container">
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <h3>Kriteria</h3>
+                        <ul>
+                            <li>Jenis Kelamin</li>
+                            <li>Usia</li>
+                            <li>Pendidikan</li>
+                            <li>Pengalaman Kerja</li>
+                            <li>Tinggi Badan</li>
+                        </ul>
+                    </div>
+                    <div class="facility-card">
+                        <h3>Kualifikasi</h3>
+                        <ul>
+                            <li>Perempuan</li>
+                            <li>18 s/d 20 tahun</li>
+                            <li>SMA/SMK</li>
+                            <li>Fresh graduate are welcome</li>
+                            <li>155 cm (P)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pendaftaran" class="registration-section">
+            <div class="container">
+                <h2 class="section-title">Daftar Sekarang</h2>
+                <div class="registration-content">
+                    <div class="registration-text">
+                        <p>Siap untuk memulai perjalanan menuju karir impian Anda?</p>
+                        <p>Bergabunglah dengan kami dan raih kesuksesan!</p>
+                    </div>
+                    <div class="registration-buttons">
+                        <a href="isidisini.html" class="cta-button open-registration-modal">
+                            <i class="fas fa-user-plus"></i> Daftar Sekarang
+                        </a>
+                        <a href="https://wa.me/6281234567890" class="info-button">
+                            <i class="fab fa-whatsapp"></i> Info Lebih Lanjut
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="kontak" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Jam Kerja</h3>
+                                <p>Senin - Jumat, 08:00 - 17:00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Alamat</h3>
+                                <p>Jl. Pesona Wibawa Praja No.08 Blok i5, Jeungjing, Kec. Cisoka, Kabupaten Tangerang, Banten 15730</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Telepon</h3>
+                                <p>(021) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>galangbuffon14@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h3>Ikuti Kami</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LPK Gyokai Indonesia Kompeten. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

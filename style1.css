@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    inline-size: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    inline-size: 100%;
+    max-inline-size: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Header */
+.program-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-block-end: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.program-header small {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Sections */
+section {
+    border-radius: 10px;
+    padding: 30px;
+    margin-block-end: 30px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-block-end: 20px;
+    padding-block-end: 10px;
+    border-block-end: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+.facilities-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.facilities-section h2 {
+    text-align: center;
+    margin-block-end: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.facility-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.facility-card h3 {
+    color: #007bff;
+    margin-block-end: 15px;
+    font-size: 1.5em;
+}
+
+.facility-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.facility-card li {
+    margin-block-end: 10px;
+    padding-inline-start: 20px;
+    position: relative;
+}
+
+.facility-card li::before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+}
+
+/* Media query untuk layar yang lebih kecil */
+@media screen and (max-width: 768px) {
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-card {
+        margin-block-end: 20px;
+    }
+}
+
+.about-image img.thumbnail {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about-image img.thumbnail:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-block-start: 100px;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    inline-size: 80%;
+    max-inline-size: 700px;
+}
+
+.close {
+    position: absolute;
+    inset-block-start: 15px;
+    inset-inline-end: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image-container {
+    flex: 1;
+    max-inline-size: 500px;
+    position: relative;
+    padding-block-end: 80px; /* Memberikan ruang untuk thumbnail */
+}
+
+.main-image {
+    inline-size: 100%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Menambahkan bayangan untuk efek melayang */
+}
+
+.main-image img {
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.thumbnail-carousel {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    inline-size: 80%;
+    z-index: 1;
+}
+
+.thumbnail-container {
+    display: flex;
+    overflow: hidden;
+    inline-size: 100%;
+    max-inline-size: 200px;
+    block-size: 60px;
+    margin: 0 auto;
+    border-radius: 30px; /* Membuat container thumbnail lebih bulat */
+}
+
+.thumbnail {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    block-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Membuat thumbnail lebih bulat */
+}
+
+.carousel-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    position: absolute;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    font-size: 14px;
+    border-radius: 50%; /* Membuat tombol bulat */
+    inline-size: 30px;
+    block-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-button.prev {
+    inset-inline-start: -15px;
+}
+
+.carousel-button.next {
+    inset-inline-end: -15px;
+}
+
+/* CSS untuk modal tetap sama seperti sebelumnya */
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image-container {
+        max-inline-size: 100%;
+        padding-block-end: 70px; /* Mengurangi padding untuk layar kecil */
+    }
+
+    .thumbnail-container {
+        max-inline-size: 150px;
+        block-size: 50px;
+    }
+}
+
+.about-section .about-text p {
+    color: white;
+}

@@ -1,0 +1,78 @@
+.legalitas-section {
+    background-color: #f5f5f5; /* Warna latar belakang abu-abu muda */
+    padding: 50px 0;
+}
+
+.legalitas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.legalitas-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.legalitas-item {
+    flex: 1;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.legalitas-item:hover {
+    transform: translateY(-5px);
+}
+
+.legalitas-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legalitas-item p {
+    margin-top: 10px;
+    color: #333;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Media query untuk layar ponsel */
+@media screen and (max-width: 768px) {
+    .legalitas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .legalitas-row {
+        flex-direction: column;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.header--hidden {
+    transform: translateY(-100%);
+}
+
+main {
+    padding-top: 100px; /* Sesuaikan dengan tinggi header Anda */
+}

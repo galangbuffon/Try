@@ -1,0 +1,295 @@
+.partnership-section {
+    margin-block: 40px;
+}
+
+.partnership-section h2 {
+    text-align: center;
+    margin-block-end: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.partner-container {
+    max-inline-size: 1000px; /* Sesuaikan lebar maksimum sesuai kebutuhan */
+    margin-inline: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Memastikan konten yang meluap tersembunyi */
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-block-size: 400px; /* Tinggi maksimum ditingkatkan */
+    overflow-y: auto;
+    padding-inline-end: 15px; /* Ruang untuk scrollbar */
+    min-block-size: 100%; /* Memastikan grid mengambil seluruh tinggi container */
+}
+
+.partner-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    min-block-size: 120px; /* Memberikan tinggi minimum pada setiap item */
+}
+
+.partner-item:hover {
+    transform: scale(1.05);
+}
+
+.partner-item img {
+    inline-size: 80px;
+    block-size: 80px;
+    object-fit: contain;
+    margin-block-end: 10px;
+}
+
+.partner-item p {
+    font-size: 0.8em;
+    color: #666;
+    margin: 0;
+    max-inline-size: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Gaya scrollbar untuk browser berbasis WebKit */
+.partner-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.partner-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.partner-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.partner-grid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Media query untuk tablet */
+@media screen and (max-width: 1024px) {
+    .partner-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .partner-item img {
+        inline-size: 70px;
+        block-size: 70px;
+    }
+}
+
+/* Media query untuk smartphone */
+@media screen and (max-width: 768px) {
+    .partner-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .partner-item img {
+        inline-size: 60px;
+        block-size: 60px;
+    }
+
+    .partner-item p {
+        font-size: 0.7em;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  body {
+    animation: fadeIn 1s ease-in;
+  }
+  nav ul li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+    transform: translateY(-3px);
+  }
+  .section-title {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inline-size: 0;
+    block-size: 2px;
+    background-color: #ffd700;
+    transition: width 0.5s ease;
+  }
+  
+  .section-title:hover::after {
+    inline-size: 100%;
+  }
+  .hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .program-card, .facility-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .program-card:hover, .facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .cta-button, .info-button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover, .info-button:hover {
+    transform: scale(1.05);
+  }
+  footer {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  footer::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    background: rgba(177, 177, 177, 0);
+  }
+  
+  .footer-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  footer {
+    position: relative;
+    padding-block-end: 80px; /* Meningkatkan padding untuk memberikan ruang lebih */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-block-end: 60px; /* Meningkatkan margin untuk memberikan ruang lebih */
+}
+
+.footer-section {
+    flex: 1;
+    min-inline-size: 250px;
+    margin-block-end: 20px;
+}
+
+.footer-bottom {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries untuk responsivitas */
+@media screen and (max-width: 768px) {
+    footer {
+        padding-block-end: 100px; /* Meningkatkan padding untuk layar kecil */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        margin-block-end: 40px;
+    }
+
+    .footer-section {
+        margin-block-end: 30px;
+    }
+
+    .footer-bottom {
+        padding: 10px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding-block-end: 120px; /* Meningkatkan lagi untuk layar sangat kecil */
+    }
+
+    .footer-content {
+        padding: 15px;
+    }
+
+    .footer-section {
+        min-inline-size: 100%;
+    }
+}
+
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0077be; /* Warna biru yang sesuai dengan tema */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Sesuaikan dengan font yang Anda gunakan */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.load-more-btn:hover {
+    background-color: #005c91; /* Warna yang sedikit lebih gelap saat hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.load-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.load-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.3);
+}
